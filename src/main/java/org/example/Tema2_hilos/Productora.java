@@ -16,7 +16,7 @@ public class Productora implements Runnable {
         for (int i = 0; i < 10; i++) {
             try {
                 System.out.println("Productor " + Thread.currentThread().getName() + " enviando mensaje....");
-                cola.recibir_mensaje("Mensaje numero: " + String.valueOf(i) + " enviado por:" + Thread.currentThread().getName());
+                cola.recibir_mensaje("Mensaje numero: " + i + " enviado por:" + Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
